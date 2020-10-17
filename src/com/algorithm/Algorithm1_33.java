@@ -1,4 +1,4 @@
-package programers;
+package com.algorithm;
 
 public class Algorithm1_33 {
     public static String solution(String phone_number) {

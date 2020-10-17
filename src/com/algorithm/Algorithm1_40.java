@@ -1,6 +1,4 @@
-package programers;
-
-import java.util.Arrays;
+package com.algorithm;
 
 public class Algorithm1_40 {
 

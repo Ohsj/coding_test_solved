@@ -1,6 +1,6 @@
 package com.algorithm;
 
-public class Algorithn1_28 {
+public class Algorithm1_29 {
     public static int solution(int num) {
         int answer = 0;
 

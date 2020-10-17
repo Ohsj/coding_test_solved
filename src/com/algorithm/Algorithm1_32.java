@@ -1,4 +1,4 @@
-package programers;
+package com.algorithm;
 
 public class Algorithm1_32 {
     public static boolean solution(int x) {

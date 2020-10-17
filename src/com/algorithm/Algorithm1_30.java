@@ -1,4 +1,4 @@
-package programers;
+package com.algorithm;
 
 public class Algorithm1_30 {
     public static int solution(int num) {

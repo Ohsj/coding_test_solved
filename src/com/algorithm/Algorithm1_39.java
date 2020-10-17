@@ -1,7 +1,6 @@
-package programers;
+package com.algorithm;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class Algorithm1_39 {
     public static int[] solution(int N, int[] stages) {

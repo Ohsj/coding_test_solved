@@ -1,6 +1,7 @@
-package programers;
+package com.algorithm;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Algorithm2_04 {
 

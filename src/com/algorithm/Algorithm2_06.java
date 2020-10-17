@@ -1,6 +1,6 @@
-package programers;
+package com.algorithm;
 
-import java.util.*;
+import java.util.Arrays;
 
 public class Algorithm2_06 {
 

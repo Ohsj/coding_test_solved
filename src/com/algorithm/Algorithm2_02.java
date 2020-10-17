@@ -1,8 +1,4 @@
-package programers;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+package com.algorithm;
 
 public class Algorithm2_02 {
 
