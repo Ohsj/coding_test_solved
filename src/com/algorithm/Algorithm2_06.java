@@ -11,7 +11,7 @@ public class Algorithm2_06 {
         4 = 10
         5 = 15
      */
-
+    // 달팽이
     public static int[] solution(int n) {
         int max = n * (n+1) / 2;
         int size = n;

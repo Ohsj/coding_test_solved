@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class PreTest1 {
+public class PreTest1_2019 {
     static int N = 10;
     static int[][] check = new int[N][N];
     static int[][] map = {
