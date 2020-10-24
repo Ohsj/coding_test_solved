@@ -20,7 +20,7 @@ public class PreTest1_2020 {
                 cnt.put((char) ('A' + i), 0);
             }
         }
-        List<Character> order = new ArrayList();
+        List<Character> order = new ArrayList<>();
         for (int i = 0; i < numOfAllPlayers - 1; i++) {
             order.add((char) ('B' + i));
         }
@@ -39,8 +39,7 @@ public class PreTest1_2020 {
             cnt.put(cur, cnt.get(cur) + 1);
         }
 
-        for (int i = 0; i < order.size(); i++) {
-            char player = order.get(i);
+        for (char player : order) {
             System.out.println(player + " " + cnt.get(player));
         }
 
