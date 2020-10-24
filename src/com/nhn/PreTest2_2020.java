@@ -58,19 +58,19 @@ public class PreTest2_2020 {
         int answer = 0;
         int[] wall = new int[width];
 
-        for (int[] block : blocks) {
+        for (int i = 0; i < day; i++) {
             for (int j = 0; j < width; j++) {
-                wall[j] += block[j];
+                wall[j] += blocks[i][j];
             }
 
             int start = 0;
             int end = findBigger(wall, start);
             while(start < width - 1){
-                for (int i = start + 1; i < end; i++) {
+                for (int j = start + 1; j < end; j++) {
                     int min = Math.min(wall[start], wall[end]);
-                    int gap = min - wall[i];
+                    int gap = min - wall[j];
                     answer += gap;
-                    wall[i] = min;
+                    wall[j] = min;
                 }
 
                 start = end;
