@@ -38,31 +38,14 @@ public class PreTest2_2020 {
             for (int j = 0; j < width; j++) {
                 wall[j] += blocks[i][j];
             }
-
-            int before = 0;
-            for (int j = 1; j < wall.length - 1; j++) {
-                int a = wall[j-1];
-                int b = wall[j+1];
-                int min = Math.min(a,b);
-
-                if (wall[j] < min) {
-                    answer+= min;
-                    wall[j] = min;
-                    if (before != 0 && min > before) {
-                        answer+=min;
-                    }
-                    before = min;
-                }
-            }
-
         }
         System.out.println(answer);
     }
 
     public static void main(String[] args) {
-        // 20
-//        solution(2, 6, new int[][]{{6, 2, 11, 0, 3, 5}, {6, 3, 0, 9, 0, 5}});
-        // 69
+        // answer 20
+        solution(2, 6, new int[][]{{6, 2, 11, 0, 3, 5}, {6, 3, 0, 9, 0, 5}});
+        // answer 69
         solution(3, 10, new int[][]{{6, 12, 0, 2, 8, 4, 0, 7, 3, 6}, {6, 1, 3, 0, 2, 8, 0, 0, 13, 8}, {6, 3, 0, 10, 6, 5, 7, 0, 0, 3}});
     }
 }
