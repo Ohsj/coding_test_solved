@@ -18,28 +18,22 @@ public class P2437 {
 
         Arrays.sort(w);
 
-        int number = 1;
-        while(true) {
-            int cur = n - 1;
-            int chk = 0;
-            int tmp = number;
-            boolean isHave = true;
-            for (int i = cur; i >= 0; i--) {
-                if (tmp >= w[i]) {
-                    tmp -= w[i];
-                    chk += w[i];
-                }
-            }
+        if (w[0] != 1) {
+            System.out.println(1);
+            return;
+        }
 
-            if (chk != number) {
-                isHave = false;
-            }
-
-            if(!isHave) {
-                System.out.println(number);
+        int sum = w[0];
+        int ans = 0;
+        for (int i = 1; i < n; i++) {
+            if (sum + 1 < w[i]) {
+                ans = sum + 1;
                 break;
             }
-            number++;
+            sum += w[i];
         }
+
+        if (ans == 0) ans = sum + 1;
+        System.out.println(ans);
     }
 }
