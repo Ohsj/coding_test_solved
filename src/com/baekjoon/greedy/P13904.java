@@ -17,19 +17,19 @@ public class P13904 {
         Arrays.sort(t);
 
         int res = 0;
-        Task[] seq = new Task[1001];
+        boolean[] seq = new boolean[1001];
 
         for (int i = 1; i <= n; i++) {
             Task tmp = t[i - 1];
             int idx = tmp.d;
             while (idx >= 1) {
-                if (seq[idx] == null) {
+                if (!seq[idx]) {
                     break;
                 }
                 idx--;
             }
             if (idx != 0) {
-                seq[idx] = tmp;
+                seq[idx] = true;
                 res += tmp.w;
             }
 
