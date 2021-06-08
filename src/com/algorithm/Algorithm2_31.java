@@ -1,7 +1,6 @@
 package com.algorithm;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  * https://programmers.co.kr/learn/courses/30/lessons/1835
@@ -37,7 +36,7 @@ public class Algorithm2_31 {
         if (cnt == data.length) res.add(out);
     }
 
-    public static void perm(String[] arr, String out, boolean[] visit, int depth, int n, int r, int cnt, String[] data) {
+    public static void perm(String[] arr, String out, boolean[] visit, int depth, int n, int r, String[] data) {
         if (depth == r) {
             check(out, data);
             return;
@@ -47,7 +46,7 @@ public class Algorithm2_31 {
             if (!visit[i]) {
                 visit[i] = true;
                 out += arr[i];
-                perm(arr, out, visit, depth + 1, n, r, cnt, data);
+                perm(arr, out, visit, depth + 1, n, r, data);
                 out = out.substring(0, out.length() - 1);
                 visit[i] = false;
             }
@@ -57,15 +56,12 @@ public class Algorithm2_31 {
     public static int solution(int n, String[] data) {
         boolean[] visit = new boolean[8];
         res.clear();
-        perm(arr, "", visit, 0, 8, 8, n, data);
+        perm(arr, "", visit, 0, 8, 8, data);
         return res.size();
     }
 
     public static void main(String[] args) {
         System.out.println(solution(2, new String[]{"N~F=0", "R~T>2"}));
-        res.clear();
         System.out.println(solution(2, new String[]{"M~C<2", "C~M>1"}));
-
-//        check("RNFATCJM", new String[]{"N~F=0", "R~T>2"});
     }
 }
